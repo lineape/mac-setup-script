@@ -1,3 +1,8 @@
+<img src="https://img.shields.io/badge/likes-turtles-blue.svg?logo=evernote&style=popout-square">
+
+<img src="https://img.shields.io/badge/can't-identify_turtles-red.svg?logo=tapas&style=popout-square">
+ß
+
 # Setup script notes
 
 run `./setup.sh` to install brew, add taps, casks and bottles
