@@ -4,25 +4,36 @@ set -x
 
 HERE=$(dirname $0)
 
-# Install brew
-if ! brew list >/dev/null; then
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 read -r -d '' TAPS <<EOF
 AdoptOpenJDK/openjdk
 theseal/blank-screensaver
 homebrew/cask-fonts
 EOF
 
-for tap in $TAPS; do
-  brew tap $tap
-done
+read -r -d '' BOTTLES <<EOF
+awscli
+cmatrix
+gradle
+gradle-completion
+htop
+httpie
+jq
+ncdu
+node@10
+node@12
+telnet
+tmux
+tree
+watch
+watchman
+wget
+yarn
+EOF
 
 read -r -d '' CASKS <<EOF
 adoptopenjdk
+adoptopenjdk8
 amethyst
-android-studio
 disk-inventory-x
 docker
 firefox
@@ -49,28 +60,19 @@ virtualbox
 visual-studio-code
 EOF
 
+
+# Install brew
+if ! brew list >/dev/null; then
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+for tap in $TAPS; do
+  brew tap $tap
+done
+
 for cask in $CASKS; do
   brew cask install $cask
 done
-
-read -r -d '' BOTTLES <<EOF
-awscli
-cmatrix
-gradle
-gradle-completion
-htop
-httpie
-jq
-ncdu
-node@10
-telnet
-tmux
-tree
-watch
-watchman
-wget
-yarn
-EOF
 
 for bottle in $BOTTLES; do
   brew install $bottle
