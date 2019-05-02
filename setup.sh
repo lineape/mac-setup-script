@@ -54,6 +54,7 @@ scroll-reverser
 slack
 sourcetree
 spotify
+steam
 teamviewer
 telegram
 virtualbox
