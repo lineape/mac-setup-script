@@ -5,7 +5,7 @@ set -x
 HERE=$(dirname $0)
 
 # Install brew
-if ! whereis brew; then
+if ! brew list >/dev/null; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
