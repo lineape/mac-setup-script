@@ -13,6 +13,7 @@ EOF
 read -r -d '' BOTTLES <<EOF
 awscli
 cmatrix
+composer
 gradle
 gradle-completion
 htop
@@ -33,7 +34,7 @@ EOF
 read -r -d '' CASKS <<EOF
 adoptopenjdk
 adoptopenjdk8
-amethyst
+discretescroll
 disk-inventory-x
 docker
 firefox

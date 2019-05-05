@@ -2,12 +2,54 @@
 
 # Setup script notes
 
-run `./setup.sh` to install brew, add taps, casks and bottles
+Run `./setup-initial.sh` to install things the first time around. Only use this once.
 
-## Note about Virtualbox
+Run `./setup.sh` to install brew, add taps, casks and bottles
 
-You need to allow Oracle to install in Security and Privacy under general
+## Home Dir
+### Sync from this repo to home dir
 
-## Note about various permissions
+
+
+## Mac Specific
+### Apps to install outside brew
+#### App Store
+* XCode
+* Magnet (Window Manager)
+
+### Permissions
+In many cases, you need to go to Security and Privacy and allow these 3rd party apps access (look in general tab, under "Allow apps downloaded from").
 
 Some apps need to have their permissions set (Accessibility, etc.) manually
+
+### Login items (apps to start at boot)
+In order for apps to start with macos, the app needs to added to the Login Items in `System Preferences -> User & Groups -> Login Items`
+
+#### Login Items
+* Scroll Reverser
+* Magnet
+* DiscreteScroll
+
+### Spotlight
+Sometimes spotlight indexes things you don't want. Programs, folders, etc.
+
+To instruct spotlight not to index something go to `System Preferences -> Spotlight -> Privacy` and drag the app / directory to the list.
+
+#### Spotlight ignore
+* Google Drive
+* ~/projects
+* Terminal.app
+
+## Terminal / CLI setup
+### Global commands
+* `npm install -g @aws-amplify/cli`
+* `npm install -g react-native-cli`
+
+### Keys
+Copy the `~/.ssh` and `~/.aws` directories from the old install
+
+### iterm2
+* [make the terminal the default](https://superuser.com/questions/379342/setting-iterm2-as-the-default-terminal-osx-lion)
+* set the font size `iTerm2 -> Preferences -> Profiles -> Text` to 14pt Menlo Regular for Powerline
+* [set the color scheme](https://gist.github.com/kevin-smets/8568070)
+
