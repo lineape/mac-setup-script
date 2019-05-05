@@ -7,8 +7,18 @@ Run `./setup-initial.sh` to install things the first time around. Only use this 
 Run `./setup.sh` to install brew, add taps, casks and bottles
 
 ## Home Dir
-### Sync from this repo to home dir
+### Syncing
+Note: only files in the `/home-files/` directory will be synced. All others are ignored.
 
+#### Initial setup
+* Run `./sync-to-home`
+
+#### Workflow for editing home files
+* Run `./sync-from-home`
+* Check the git diff to see if the file has been changed externally
+* Make any edits
+* Run `./sync-to-repo`
+* If any problems arise from the changes, rollback by copying the most recent backup from /home-dir-backup/
 
 
 ## Mac Specific
@@ -40,6 +50,7 @@ To instruct spotlight not to index something go to `System Preferences -> Spotli
 * ~/projects
 * Terminal.app
 
+
 ## Terminal / CLI setup
 ### Global commands
 * `npm install -g @aws-amplify/cli`
@@ -51,5 +62,5 @@ Copy the `~/.ssh` and `~/.aws` directories from the old install
 ### iterm2
 * [make the terminal the default](https://superuser.com/questions/379342/setting-iterm2-as-the-default-terminal-osx-lion)
 * set the font size `iTerm2 -> Preferences -> Profiles -> Text` to 14pt Menlo Regular for Powerline
-* [set the color scheme](https://gist.github.com/kevin-smets/8568070)
+* set the color theme to Tango Dark
 
