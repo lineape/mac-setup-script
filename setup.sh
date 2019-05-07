@@ -40,7 +40,7 @@ docker
 firefox
 font-fira-mono-for-powerline
 font-menlo-for-powerline
-github
+google-backup-and-sync
 google-chrome
 google-drive-file-stream
 imageoptim
@@ -48,7 +48,6 @@ insomnia
 iterm2
 jetbrains-toolbox
 keepassxc
-mightytext
 rcdefaultapp
 react-native-debugger
 scroll-reverser
