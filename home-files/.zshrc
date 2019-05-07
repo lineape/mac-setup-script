@@ -95,6 +95,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.yarn-completion/yarn-completion.plugin.zsh
 
 # User configuration
 
