@@ -20,7 +20,7 @@ function readFileSafe(filePath, fallback = '') {
 }
 
 
-module.exports.HomeDir = class HomeDir {
+class HomeDir {
     /**
      * @returns {string}
      */
@@ -54,8 +54,7 @@ module.exports.HomeDir = class HomeDir {
     }
 }
 
-
-module.exports.HomeDirBackup = class HomeDirBackup {
+class HomeDirBackup {
     /**
      * @param {string | undefined} id 
      */
@@ -107,8 +106,7 @@ module.exports.HomeDirBackup = class HomeDirBackup {
 
 HomeDirBackup.setBackupId();
 
-
-module.exports.HomeDirRepo = class HomeDirRepo {
+class HomeDirRepo {
     /**
      * @returns {string}
      */
@@ -148,3 +146,9 @@ module.exports.HomeDirRepo = class HomeDirRepo {
         return path.join(HomeDirRepo.getPath(), fileName);
     }
 }
+
+module.exports = {
+    HomeDir,
+    HomeDirBackup,
+    HomeDirRepo
+};
