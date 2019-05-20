@@ -12,8 +12,8 @@ EOF
 
 read -r -d '' BOTTLES <<EOF
 awscli
-cmatrix
 composer
+go
 gradle
 gradle-completion
 htop
@@ -34,15 +34,16 @@ EOF
 read -r -d '' CASKS <<EOF
 adoptopenjdk
 adoptopenjdk8
+cyberduck
 discretescroll
 disk-inventory-x
-docker
 firefox
 font-fira-mono-for-powerline
 font-menlo-for-powerline
 google-backup-and-sync
 google-chrome
 google-drive-file-stream
+handbrake
 imageoptim
 insomnia
 iterm2
@@ -57,8 +58,9 @@ spotify
 steam
 teamviewer
 telegram
-virtualbox
 visual-studio-code
+vlc
+vmware-fusion
 EOF
 
 
